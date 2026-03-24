@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codexia — Premium Web Studio</title>
+    <title>Codexiya — Premium Web Studio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -24,7 +24,6 @@
         --nav-bg: rgba(8, 12, 26, 0.92);
       }
 
-      /* ── LIGHT MODE ── */
       [data-theme="light"] {
         --navy: #f4f1ea;
         --navy2: #ede9df;
@@ -37,7 +36,6 @@
         --nav-bg: rgba(244, 241, 234, 0.95);
       }
 
-      /* Theme toggle button */
       .theme-toggle {
         width: 38px;
         height: 38px;
@@ -69,6 +67,7 @@
       [data-theme="light"] .theme-toggle .icon-sun {
         display: block;
       }
+
       *,
       *::before,
       *::after {
@@ -95,7 +94,6 @@
         opacity: 0.4;
       }
 
-      /* ── NAV ── */
       nav {
         position: fixed;
         top: 0;
@@ -111,8 +109,6 @@
         border-bottom: 1px solid var(--border);
         transition: background 0.4s;
       }
-
-      /* Groups theme toggle + hamburger — always stays on the right */
       .nav-right {
         display: flex;
         align-items: center;
@@ -169,7 +165,6 @@
         width: 100%;
       }
 
-      /* Scroll progress bar */
       #progress-bar {
         position: fixed;
         top: 0;
@@ -181,7 +176,6 @@
         transition: width 0.1s linear;
       }
 
-      /* Scroll-to-top button */
       #scrollTop {
         position: fixed;
         bottom: 2rem;
@@ -214,7 +208,6 @@
         transform: translateY(-2px);
       }
 
-      /* Hamburger */
       .hamburger {
         display: none;
         flex-direction: column;
@@ -233,7 +226,6 @@
         border-radius: 2px;
         transition: all 0.35s ease;
       }
-      /* In light mode hamburger lines should be dark */
       [data-theme="light"] .hamburger span {
         background: #1a1814;
       }
@@ -248,7 +240,6 @@
         transform: translateY(-7px) rotate(-45deg);
       }
 
-      /* Mobile menu */
       .mobile-menu {
         display: none;
         position: fixed;
@@ -263,7 +254,6 @@
         opacity: 0;
         transition: opacity 0.3s ease;
       }
-      /* Light mode mobile menu */
       [data-theme="light"] .mobile-menu {
         background: rgba(244, 241, 234, 0.98);
       }
@@ -282,7 +272,6 @@
       .mobile-menu a:hover {
         color: var(--gold);
       }
-      /* Light mode mobile menu text */
       [data-theme="light"] .mobile-menu a {
         color: #1a1814;
       }
@@ -306,7 +295,6 @@
         font-weight: 500;
       }
 
-      /* ── SHARED ── */
       section {
         padding: 5rem 4rem;
         position: relative;
@@ -340,7 +328,6 @@
         color: var(--gold);
       }
 
-      /* ── HERO ── */
       .hero {
         min-height: 100vh;
         display: flex;
@@ -461,7 +448,6 @@
         border-color: var(--gold);
         color: var(--gold);
       }
-
       .hero-stats {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -518,7 +504,6 @@
         }
       }
 
-      /* ── MARQUEE ── */
       .marquee-wrap {
         background: var(--navy2);
         border-top: 1px solid var(--border);
@@ -548,8 +533,6 @@
         }
       }
 
-      /* ── SERVICES ── */
-      /* ── SERVICES ── */
       #services {
         background: var(--navy);
       }
@@ -578,7 +561,6 @@
         line-height: 1;
         flex-shrink: 0;
       }
-
       .services-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -618,8 +600,6 @@
       .service-card:hover::after {
         opacity: 1;
       }
-
-      /* Icon container */
       .svc-icon-wrap {
         width: 46px;
         height: 46px;
@@ -665,7 +645,6 @@
         );
         border: 1px solid rgba(236, 72, 153, 0.2);
       }
-
       .svc-header {
         display: flex;
         align-items: flex-start;
@@ -747,7 +726,6 @@
         content: "→";
       }
 
-      /* ── WHY US ── */
       .why-wrap {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -771,7 +749,6 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 2.5rem;
-        padding-right: 2.5rem;
         padding-bottom: calc(130px + 1.5rem);
         overflow: hidden;
       }
@@ -801,7 +778,7 @@
         text-transform: uppercase;
         color: #c9a84c;
         width: fit-content;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.5rem;
         position: relative;
         z-index: 1;
       }
@@ -842,7 +819,6 @@
         font-weight: 500;
         color: #080c1a;
       }
-
       .why-points {
         display: flex;
         flex-direction: column;
@@ -884,7 +860,6 @@
         line-height: 1.7;
       }
 
-      /* ── PORTFOLIO ── */
       #portfolio {
         background: var(--navy2);
       }
@@ -1019,7 +994,85 @@
         line-height: 1.55;
       }
 
-      /* ── PROCESS ── */
+      /* ── LIVE PORT CARD SPECIAL STYLES ── */
+      .port-card-live {
+        border: 1px solid rgba(100, 190, 255, 0.22);
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        transition:
+          transform 0.4s,
+          box-shadow 0.4s,
+          border-color 0.4s;
+        text-decoration: none;
+        display: block;
+        color: inherit;
+        position: relative;
+      }
+      .port-card-live:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 20px 50px rgba(0, 0, 0, 0.5),
+          0 0 0 1px rgba(100, 190, 255, 0.3);
+        border-color: rgba(100, 190, 255, 0.45);
+      }
+      .port-card-live::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 4px;
+        background: linear-gradient(
+          135deg,
+          rgba(100, 190, 255, 0.03),
+          transparent
+        );
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .port-card-live:hover::before {
+        opacity: 1;
+      }
+      .port-card-live .port-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .live-visit-arrow {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold);
+        opacity: 0.7;
+        white-space: nowrap;
+        transition:
+          opacity 0.3s,
+          gap 0.3s;
+        font-family: "DM Sans", sans-serif;
+      }
+      .port-card-live:hover .live-visit-arrow {
+        opacity: 1;
+        gap: 8px;
+      }
+      @keyframes livePulse {
+        0%,
+        100% {
+          box-shadow: 0 0 4px rgba(0, 210, 120, 0.7);
+        }
+        50% {
+          box-shadow:
+            0 0 10px rgba(0, 210, 120, 1),
+            0 0 0 4px rgba(0, 210, 120, 0.15);
+        }
+      }
+
       .process-steps {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1041,7 +1094,8 @@
         font-family: "Cormorant Garamond", serif;
         font-size: 2.8rem;
         font-weight: 700;
-        color: rgba(201, 168, 76, 0.1);
+        color: rgba(201, 168, 76, 0.3);
+        /* color: #c9a84d; */
         line-height: 1;
         margin-bottom: 0.6rem;
       }
@@ -1056,7 +1110,6 @@
         line-height: 1.6;
       }
 
-      /* ── TESTIMONIALS ── */
       #testimonials {
         background: var(--navy2);
       }
@@ -1119,7 +1172,6 @@
         letter-spacing: 0.05em;
       }
 
-      /* ── CONTACT ── */
       .contact-wrap {
         display: grid;
         grid-template-columns: 1fr 1.2fr;
@@ -1173,7 +1225,6 @@
         color: var(--gold);
       }
 
-      /* WhatsApp floating bubble */
       .wa-float {
         position: fixed;
         bottom: 5.5rem;
@@ -1214,7 +1265,6 @@
         }
       }
 
-      /* Contact form */
       .contact-form {
         display: flex;
         flex-direction: column;
@@ -1262,7 +1312,6 @@
         resize: vertical;
         min-height: 110px;
       }
-      /* Light mode inputs */
       [data-theme="light"] .form-input {
         background: rgba(0, 0, 0, 0.03);
         color: #1a1814;
@@ -1275,7 +1324,6 @@
         color: rgba(100, 110, 120, 0.45);
       }
 
-      /* ── CUSTOM DROPDOWN ── */
       .custom-select-wrap {
         position: relative;
         z-index: 1;
@@ -1308,8 +1356,6 @@
         border-color: var(--gold);
         background: rgba(201, 168, 76, 0.05);
       }
-
-      /* Light mode trigger */
       [data-theme="light"] .custom-select-trigger {
         background: rgba(0, 0, 0, 0.03);
         color: rgba(100, 110, 120, 0.8);
@@ -1322,7 +1368,6 @@
         background: rgba(201, 168, 76, 0.07);
         border-color: var(--gold);
       }
-
       .custom-select-arrow {
         position: absolute;
         right: 1rem;
@@ -1341,7 +1386,6 @@
       .custom-select-wrap.open .custom-select-arrow {
         transform: translateY(-50%) rotate(180deg);
       }
-
       .custom-select-options {
         position: absolute;
         top: calc(100% + 6px);
@@ -1360,7 +1404,6 @@
           opacity 0.25s ease,
           transform 0.25s ease;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-        /* Custom scrollbar */
         scrollbar-width: thin;
         scrollbar-color: rgba(201, 168, 76, 0.4) transparent;
       }
@@ -1377,26 +1420,17 @@
       .custom-select-options::-webkit-scrollbar-thumb:hover {
         background: rgba(201, 168, 76, 0.6);
       }
-      /* Light mode dropdown panel */
       [data-theme="light"] .custom-select-options {
         background: #ffffff;
         border: 1px solid rgba(160, 120, 30, 0.2);
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
         scrollbar-color: rgba(160, 120, 30, 0.4) transparent;
       }
-      [data-theme="light"] .custom-select-options::-webkit-scrollbar-thumb {
-        background: rgba(160, 120, 30, 0.3);
-      }
-      [data-theme="light"]
-        .custom-select-options::-webkit-scrollbar-thumb:hover {
-        background: rgba(160, 120, 30, 0.55);
-      }
       .custom-select-wrap.open .custom-select-options {
         opacity: 1;
         transform: translateY(0);
         pointer-events: all;
       }
-
       .custom-option {
         padding: 0.85rem 1rem;
         font-size: 0.87rem;
@@ -1421,8 +1455,6 @@
         color: var(--gold);
         background: rgba(201, 168, 76, 0.06);
       }
-
-      /* Light mode options */
       [data-theme="light"] .custom-option {
         color: #4b5563;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -1435,7 +1467,6 @@
         color: var(--gold);
         background: rgba(201, 168, 76, 0.08);
       }
-
       .custom-option .opt-icon {
         font-size: 1rem;
         width: 20px;
@@ -1457,12 +1488,10 @@
         background: var(--gold);
         border-color: var(--gold);
       }
-      /* hidden real select for form submission */
       .custom-select-wrap select {
         display: none;
       }
 
-      /* Form success/error messages */
       .form-msg {
         display: none;
         padding: 1rem 1.2rem;
@@ -1488,8 +1517,6 @@
       .form-msg span {
         font-size: 1.2rem;
       }
-
-      /* Submit button loading state */
       .btn-submit {
         position: relative;
         overflow: hidden;
@@ -1537,7 +1564,6 @@
         }
       }
 
-      /* ── FOOTER ── */
       footer {
         background: var(--navy);
         border-top: 1px solid var(--border);
@@ -1577,7 +1603,6 @@
         color: var(--gold);
       }
 
-      /* ── REVEAL ── */
       .reveal {
         opacity: 0;
         transform: translateY(28px);
@@ -1590,18 +1615,6 @@
         transform: translateY(0);
       }
 
-      /* ════════════════════════════════════════════
-     📐 FULLY RESPONSIVE — ALL SCREEN SIZES
-     1. Large Desktop  ≥ 1400px
-     2. Laptop         1200px – 1399px
-     3. Small Laptop   1024px – 1199px
-     4. Tablet         768px  – 1023px
-     5. Large Mobile   520px  – 767px
-     6. Mobile         380px  – 519px
-     7. Small Mobile   < 380px
-  ════════════════════════════════════════════ */
-
-      /* ── 1. LARGE DESKTOP ≥ 1400px ── */
       @media (min-width: 1400px) {
         nav {
           padding: 1.4rem 6rem;
@@ -1625,8 +1638,6 @@
           padding: 2.2rem 6rem;
         }
       }
-
-      /* ── 2. LAPTOP 1200px–1399px ── */
       @media (max-width: 1399px) and (min-width: 1200px) {
         .hero h1 {
           font-size: 5.5rem;
@@ -1635,8 +1646,6 @@
           height: 460px;
         }
       }
-
-      /* ── 3. SMALL LAPTOP 1024px–1199px ── */
       @media (max-width: 1199px) and (min-width: 1024px) {
         nav {
           padding: 1.1rem 2.5rem;
@@ -1673,8 +1682,6 @@
           padding: 2rem 2.5rem;
         }
       }
-
-      /* ── 4. TABLET 768px–1023px ── */
       @media (max-width: 1023px) and (min-width: 768px) {
         nav {
           padding: 1.1rem 2rem;
@@ -1709,7 +1716,6 @@
         .scroll-hint {
           left: 2.5rem;
         }
-        /* Services */
         .services-grid {
           grid-template-columns: repeat(2, 1fr);
           gap: 1.2rem;
@@ -1717,7 +1723,6 @@
         .services-intro {
           margin-bottom: 2rem;
         }
-        /* Why */
         .why-wrap {
           grid-template-columns: 1fr;
           gap: 2.5rem;
@@ -1737,7 +1742,6 @@
         .why-card-float .big {
           font-size: 2.2rem;
         }
-        /* Portfolio */
         .portfolio-grid {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -1750,7 +1754,6 @@
         .port-thumb {
           height: 210px;
         }
-        /* Process */
         .process-steps {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -1764,12 +1767,10 @@
         .process-step:nth-last-child(-n + 2) {
           border-bottom: none;
         }
-        /* Testimonials */
         .testi-grid {
           grid-template-columns: repeat(2, 1fr);
           gap: 1.2rem;
         }
-        /* Contact */
         .contact-wrap {
           grid-template-columns: 1fr;
           gap: 2.5rem;
@@ -1784,8 +1785,6 @@
           gap: 1rem;
         }
       }
-
-      /* ── 5. LARGE MOBILE 520px–767px ── */
       @media (max-width: 767px) and (min-width: 520px) {
         nav {
           padding: 1rem 1.5rem;
@@ -1827,7 +1826,6 @@
         .section-title {
           font-size: 2rem;
         }
-        /* Services */
         .services-grid {
           grid-template-columns: 1fr;
           gap: 1rem;
@@ -1843,7 +1841,6 @@
         .service-card {
           padding: 1.8rem;
         }
-        /* Why */
         .why-wrap {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -1868,7 +1865,6 @@
         .why-card-float .big {
           font-size: 2rem;
         }
-        /* Portfolio */
         .portfolio-grid {
           grid-template-columns: 1fr;
         }
@@ -1879,7 +1875,6 @@
         .port-thumb {
           height: 220px;
         }
-        /* Process */
         .process-steps {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -1893,11 +1888,9 @@
         .process-step:nth-last-child(-n + 2) {
           border-bottom: none;
         }
-        /* Testimonials */
         .testi-grid {
           grid-template-columns: 1fr;
         }
-        /* Contact */
         .contact-wrap {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -1920,8 +1913,6 @@
           right: 1.2rem;
         }
       }
-
-      /* ── 6. MOBILE 380px–519px ── */
       @media (max-width: 519px) {
         nav {
           padding: 1rem 1.1rem;
@@ -1985,7 +1976,6 @@
         .section-label {
           font-size: 0.66rem;
         }
-        /* Services */
         .services-grid {
           grid-template-columns: 1fr;
           gap: 0.9rem;
@@ -2006,7 +1996,6 @@
           height: 46px;
           font-size: 1.3rem;
         }
-        /* Why */
         .why-wrap {
           grid-template-columns: 1fr;
           gap: 1.8rem;
@@ -2047,7 +2036,6 @@
         .why-point-desc {
           font-size: 0.8rem;
         }
-        /* Portfolio */
         .portfolio-grid {
           grid-template-columns: 1fr;
         }
@@ -2069,7 +2057,6 @@
         .port-desc {
           font-size: 0.77rem;
         }
-        /* Process */
         .process-steps {
           grid-template-columns: 1fr;
         }
@@ -2090,7 +2077,6 @@
         .step-desc {
           font-size: 0.78rem;
         }
-        /* Testimonials */
         .testi-grid {
           grid-template-columns: 1fr;
         }
@@ -2103,7 +2089,6 @@
         .testi-quote {
           font-size: 2.2rem;
         }
-        /* Contact */
         .contact-wrap {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -2114,7 +2099,6 @@
         .contact-item-text {
           font-size: 0.79rem;
         }
-        /* Footer */
         footer {
           padding: 1.2rem 1.1rem;
           flex-direction: column;
@@ -2128,11 +2112,9 @@
         .footer-copy {
           font-size: 0.7rem;
         }
-        /* Mobile menu */
         .mobile-menu a {
           font-size: 1.7rem;
         }
-        /* Floating buttons */
         .wa-float {
           bottom: 4.8rem;
           right: 1rem;
@@ -2150,9 +2132,10 @@
           height: 40px;
           font-size: 1rem;
         }
+        .why-card-main {
+          padding-bottom: 70px;
+        }
       }
-
-      /* ── 7. SMALL MOBILE < 380px ── */
       @media (max-width: 379px) {
         nav {
           padding: 0.9rem 1rem;
@@ -2224,14 +2207,14 @@
           font-size: 1.5rem;
           gap: 1.5rem;
         }
+        .why-card-main {
+          padding-bottom: 60px;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- SCROLL PROGRESS BAR -->
     <div id="progress-bar"></div>
-
-    <!-- SCROLL TO TOP -->
     <button
       id="scrollTop"
       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
@@ -2240,9 +2223,8 @@
       ↑
     </button>
 
-    <!-- NAV -->
     <nav>
-      <a class="logo" href="#">Codexia<span>.</span></a>
+      <a class="logo" href="#">Codexiya<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Our Work</a></li>
@@ -2271,7 +2253,6 @@
       </div>
     </nav>
 
-    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
       <a href="#services" onclick="closeMenu()">Services</a>
       <a href="#portfolio" onclick="closeMenu()">Our Work</a>
@@ -2300,13 +2281,12 @@
       </button>
     </div>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
       <div style="position: relative; z-index: 1">
         <span class="hero-line"></span>
         <p class="hero-tag">
-          Web Developers · Bangalore, India · Available for Projects
+          Designers & Developers · Bangalore, India · Available for Projects
         </p>
         <h1>We Build Websites For <em>Any Business,</em> Any Goal</h1>
         <p class="hero-sub">
@@ -2340,7 +2320,6 @@
       <div class="scroll-hint">Scroll to explore</div>
     </section>
 
-    <!-- MARQUEE -->
     <div class="marquee-wrap">
       <div class="marquee-track">
         Clinics & Hospitals <span>✦</span> Restaurants & Cafés
@@ -2356,7 +2335,6 @@
       </div>
     </div>
 
-    <!-- SERVICES -->
     <section id="services">
       <div class="services-intro reveal">
         <div class="services-intro-text">
@@ -2372,7 +2350,6 @@
         </div>
         <div class="services-count">04</div>
       </div>
-
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="svc-header">
@@ -2386,13 +2363,12 @@
             Clean, fast and made to impress.
           </p>
           <div class="svc-features">
-            <span class="svc-tag">Any Business Type</span>
-            <span class="svc-tag">Professional Design</span>
-            <span class="svc-tag">Contact Forms</span>
-            <span class="svc-tag">Google Maps</span>
+            <span class="svc-tag">Any Business Type</span
+            ><span class="svc-tag">Professional Design</span
+            ><span class="svc-tag">Contact Forms</span
+            ><span class="svc-tag">Google Maps</span>
           </div>
         </div>
-
         <div class="service-card reveal" style="transition-delay: 0.1s">
           <div class="svc-header">
             <div class="svc-icon-wrap c2">🛒</div>
@@ -2405,13 +2381,12 @@
             customers to buy or schedule — anytime, anywhere.
           </p>
           <div class="svc-features">
-            <span class="svc-tag">Product Listings</span>
-            <span class="svc-tag">Online Booking</span>
-            <span class="svc-tag">Payment Ready</span>
-            <span class="svc-tag">Order Management</span>
+            <span class="svc-tag">Product Listings</span
+            ><span class="svc-tag">Online Booking</span
+            ><span class="svc-tag">Payment Ready</span
+            ><span class="svc-tag">Order Management</span>
           </div>
         </div>
-
         <div class="service-card reveal" style="transition-delay: 0.2s">
           <div class="svc-header">
             <div class="svc-icon-wrap c3">📱</div>
@@ -2424,13 +2399,12 @@
             great on every screen, every time.
           </p>
           <div class="svc-features">
-            <span class="svc-tag">Mobile Optimised</span>
-            <span class="svc-tag">Tablet Friendly</span>
-            <span class="svc-tag">Fast Loading</span>
-            <span class="svc-tag">All Browsers</span>
+            <span class="svc-tag">Mobile Optimised</span
+            ><span class="svc-tag">Tablet Friendly</span
+            ><span class="svc-tag">Fast Loading</span
+            ><span class="svc-tag">All Browsers</span>
           </div>
         </div>
-
         <div class="service-card reveal" style="transition-delay: 0.3s">
           <div class="svc-header">
             <div class="svc-icon-wrap c4">🔍</div>
@@ -2443,16 +2417,15 @@
             will show up when people search for you.
           </p>
           <div class="svc-features">
-            <span class="svc-tag">Found on Google</span>
-            <span class="svc-tag">Fast Load Speed</span>
-            <span class="svc-tag">Meta Tags Setup</span>
-            <span class="svc-tag">Google Analytics</span>
+            <span class="svc-tag">Found on Google</span
+            ><span class="svc-tag">Fast Load Speed</span
+            ><span class="svc-tag">Meta Tags Setup</span
+            ><span class="svc-tag">Google Analytics</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY US -->
     <section id="why">
       <div class="why-wrap">
         <div class="why-visual reveal">
@@ -2545,7 +2518,7 @@
 
     <!-- PORTFOLIO -->
     <section id="portfolio">
-      <div class="section-label">Sample Designs</div>
+      <div class="section-label">Sample Designs & Our Work</div>
       <h2 class="section-title">The Kind of Work <em>We Deliver</em></h2>
       <p
         style="
@@ -2557,12 +2530,465 @@
           max-width: 620px;
         "
       >
-        These are concept designs showing the quality and style of websites We
-        build. Every real project is custom-made — different layout, colours and
-        content — designed specifically for that business.
+        From real live projects to concept designs — this is the quality and
+        style we bring to every website we build. Every project is fully custom,
+        designed specifically for that business.
       </p>
       <div class="portfolio-grid">
-        <div class="port-card reveal">
+        <!-- ══ EXCELDENTALS — REAL LIVE PROJECT (FEATURED FULL WIDTH) ══ -->
+        <a
+          class="port-card-live reveal"
+          href="https://exceldentals.com"
+          target="_blank"
+          rel="noopener"
+          style="grid-column: 1/-1"
+        >
+          <div
+            style="
+              height: 320px;
+              position: relative;
+              overflow: hidden;
+              background: linear-gradient(
+                135deg,
+                #061828 0%,
+                #0b2240 45%,
+                #0d2e52 100%
+              );
+            "
+          >
+            <!-- Ambient glow layers -->
+            <div
+              style="
+                position: absolute;
+                top: -60px;
+                right: -60px;
+                width: 320px;
+                height: 320px;
+                border-radius: 50%;
+                background: radial-gradient(
+                  circle,
+                  rgba(100, 190, 255, 0.09) 0%,
+                  transparent 65%
+                );
+                pointer-events: none;
+              "
+            ></div>
+            <div
+              style="
+                position: absolute;
+                bottom: -40px;
+                left: 5%;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: radial-gradient(
+                  circle,
+                  rgba(0, 200, 180, 0.07) 0%,
+                  transparent 65%
+                );
+                pointer-events: none;
+              "
+            ></div>
+            <!-- Subtle grid pattern -->
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background-image:
+                  linear-gradient(
+                    rgba(100, 190, 255, 0.03) 1px,
+                    transparent 1px
+                  ),
+                  linear-gradient(
+                    90deg,
+                    rgba(100, 190, 255, 0.03) 1px,
+                    transparent 1px
+                  );
+                background-size: 28px 28px;
+                pointer-events: none;
+              "
+            ></div>
+
+            <div class="port-mockup">
+              <div
+                class="port-browser"
+                style="width: 72%; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5)"
+              >
+                <div
+                  class="port-browser-bar"
+                  style="background: rgba(255, 255, 255, 0.06)"
+                >
+                  <div class="dot-r"></div>
+                  <div class="dot-y"></div>
+                  <div class="dot-g"></div>
+                  <div
+                    style="
+                      margin-left: 8px;
+                      flex: 1;
+                      height: 10px;
+                      border-radius: 5px;
+                      background: rgba(255, 255, 255, 0.07);
+                      display: flex;
+                      align-items: center;
+                      padding: 0 8px;
+                    "
+                  >
+                    <span
+                      style="
+                        font-size: 0.44rem;
+                        color: rgba(255, 255, 255, 0.4);
+                        letter-spacing: 0.05em;
+                        font-family: &quot;DM Sans&quot;, sans-serif;
+                      "
+                      >🔒 exceldentals.com</span
+                    >
+                  </div>
+                </div>
+                <div class="port-browser-content" style="padding: 1rem">
+                  <!-- Nav -->
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-bottom: 10px;
+                      padding-bottom: 7px;
+                      border-bottom: 1px solid rgba(100, 190, 255, 0.08);
+                    "
+                  >
+                    <div
+                      style="
+                        height: 8px;
+                        width: 100px;
+                        border-radius: 3px;
+                        background: rgba(100, 190, 255, 0.4);
+                      "
+                    ></div>
+                    <div style="display: flex; gap: 5px">
+                      <div
+                        style="
+                          height: 5px;
+                          width: 24px;
+                          border-radius: 2px;
+                          background: rgba(255, 255, 255, 0.1);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          height: 5px;
+                          width: 24px;
+                          border-radius: 2px;
+                          background: rgba(255, 255, 255, 0.1);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          height: 5px;
+                          width: 24px;
+                          border-radius: 2px;
+                          background: rgba(255, 255, 255, 0.1);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          height: 5px;
+                          width: 24px;
+                          border-radius: 2px;
+                          background: rgba(255, 255, 255, 0.1);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          height: 6px;
+                          width: 44px;
+                          border-radius: 2px;
+                          background: rgba(100, 190, 255, 0.3);
+                          border: 1px solid rgba(100, 190, 255, 0.35);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- Hero -->
+                  <div
+                    style="
+                      background: linear-gradient(
+                        120deg,
+                        rgba(100, 190, 255, 0.1),
+                        rgba(0, 190, 170, 0.07)
+                      );
+                      border: 1px solid rgba(100, 190, 255, 0.15);
+                      border-radius: 5px;
+                      padding: 0.85rem;
+                      margin-bottom: 8px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      gap: 8px;
+                    "
+                  >
+                    <div style="flex: 1">
+                      <div
+                        style="
+                          height: 9px;
+                          width: 58%;
+                          border-radius: 3px;
+                          background: rgba(100, 190, 255, 0.5);
+                          margin-bottom: 6px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          height: 6px;
+                          width: 82%;
+                          border-radius: 3px;
+                          background: rgba(255, 255, 255, 0.14);
+                          margin-bottom: 5px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          height: 6px;
+                          width: 66%;
+                          border-radius: 3px;
+                          background: rgba(255, 255, 255, 0.09);
+                          margin-bottom: 10px;
+                        "
+                      ></div>
+                      <div style="display: flex; gap: 6px">
+                        <div
+                          style="
+                            background: rgba(100, 190, 255, 0.28);
+                            border: 1px solid rgba(100, 190, 255, 0.45);
+                            border-radius: 2px;
+                            padding: 3px 9px;
+                          "
+                        >
+                          <div
+                            style="
+                              height: 5px;
+                              width: 42px;
+                              border-radius: 2px;
+                              background: rgba(100, 190, 255, 0.7);
+                            "
+                          ></div>
+                        </div>
+                        <div
+                          style="
+                            background: transparent;
+                            border: 1px solid rgba(255, 255, 255, 0.15);
+                            border-radius: 2px;
+                            padding: 3px 9px;
+                          "
+                        >
+                          <div
+                            style="
+                              height: 5px;
+                              width: 32px;
+                              border-radius: 2px;
+                              background: rgba(255, 255, 255, 0.25);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        width: 70px;
+                        height: 50px;
+                        border-radius: 4px;
+                        background: linear-gradient(
+                          135deg,
+                          rgba(100, 190, 255, 0.15),
+                          rgba(0, 190, 170, 0.1)
+                        );
+                        border: 1px solid rgba(100, 190, 255, 0.18);
+                        flex-shrink: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.4rem;
+                      "
+                    >
+                      🦷
+                    </div>
+                  </div>
+                  <!-- Service cards -->
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: repeat(4, 1fr);
+                      gap: 5px;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 28px;
+                        border-radius: 3px;
+                        background: rgba(100, 190, 255, 0.07);
+                        border: 1px solid rgba(100, 190, 255, 0.13);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          height: 4px;
+                          width: 30px;
+                          border-radius: 2px;
+                          background: rgba(100, 190, 255, 0.32);
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        height: 28px;
+                        border-radius: 3px;
+                        background: rgba(0, 190, 170, 0.07);
+                        border: 1px solid rgba(0, 190, 170, 0.13);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          height: 4px;
+                          width: 30px;
+                          border-radius: 2px;
+                          background: rgba(0, 190, 170, 0.32);
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        height: 28px;
+                        border-radius: 3px;
+                        background: rgba(100, 190, 255, 0.07);
+                        border: 1px solid rgba(100, 190, 255, 0.13);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          height: 4px;
+                          width: 30px;
+                          border-radius: 2px;
+                          background: rgba(100, 190, 255, 0.32);
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="
+                        height: 28px;
+                        border-radius: 3px;
+                        background: rgba(0, 190, 170, 0.07);
+                        border: 1px solid rgba(0, 190, 170, 0.13);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          height: 4px;
+                          width: 30px;
+                          border-radius: 2px;
+                          background: rgba(0, 190, 170, 0.32);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- LIVE badge -->
+            <div
+              style="
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                background: rgba(0, 210, 120, 0.15);
+                border: 1px solid rgba(0, 210, 120, 0.4);
+                border-radius: 100px;
+                padding: 5px 13px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                z-index: 4;
+                backdrop-filter: blur(8px);
+              "
+            >
+              <div
+                style="
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #00d278;
+                  animation: livePulse 2s ease infinite;
+                "
+              ></div>
+              <span
+                style="
+                  font-size: 0.65rem;
+                  letter-spacing: 0.15em;
+                  text-transform: uppercase;
+                  color: #00d278;
+                  font-weight: 600;
+                  font-family: &quot;DM Sans&quot;, sans-serif;
+                "
+                >Live Project</span
+              >
+            </div>
+            <!-- "Our Work" badge -->
+            <div
+              style="
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                background: rgba(201, 168, 76, 0.13);
+                border: 1px solid rgba(201, 168, 76, 0.35);
+                border-radius: 100px;
+                padding: 5px 13px;
+                z-index: 4;
+                backdrop-filter: blur(8px);
+              "
+            >
+              <span
+                style="
+                  font-size: 0.65rem;
+                  letter-spacing: 0.14em;
+                  text-transform: uppercase;
+                  color: var(--gold);
+                  font-weight: 600;
+                  font-family: &quot;DM Sans&quot;, sans-serif;
+                "
+                >✦ Our Work</span
+              >
+            </div>
+          </div>
+          <div class="port-info">
+            <div style="flex: 1; min-width: 0">
+              <div class="port-cat">
+                🦷 Real Project — Dental Clinic · exceldentals.com
+              </div>
+              <div class="port-name">Excel Dentals — Dental Clinic Website</div>
+              <div class="port-desc">
+                A complete professional website built for a dental clinic —
+                featuring services, doctor profiles, appointment booking and a
+                clean, trust-building design that turns visitors into patients.
+                Click to visit the live site.
+              </div>
+            </div>
+            <div class="live-visit-arrow">Visit Live Site <span>↗</span></div>
+          </div>
+        </a>
+
+        <!-- CONCEPT CARD 1 -->
+        <!-- <div class="port-card reveal">
           <div class="port-thumb port-bg-1">
             <div class="port-mockup">
               <div class="port-browser">
@@ -2613,7 +3039,9 @@
               healthcare provider.
             </div>
           </div>
-        </div>
+        </div> -->
+
+        <!-- CONCEPT CARD 2 -->
         <div class="port-card reveal">
           <div class="port-thumb port-bg-2">
             <div class="port-mockup">
@@ -2649,7 +3077,34 @@
               product business.
             </div>
           </div>
+          <div
+            style="
+              position: absolute;
+              top: 16px;
+              right: 16px;
+              background: rgba(201, 168, 76, 0.13);
+              border: 1px solid rgba(201, 168, 76, 0.35);
+              border-radius: 100px;
+              padding: 5px 13px;
+              z-index: 4;
+              backdrop-filter: blur(8px);
+            "
+          >
+            <span
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--gold);
+                font-weight: 600;
+                font-family: &quot;DM Sans&quot;, sans-serif;
+              "
+              >✦UI Demos
+            </span>
+          </div>
         </div>
+
+        <!-- CONCEPT CARD 3 -->
         <div class="port-card reveal" style="transition-delay: 0.1s">
           <div class="port-thumb port-bg-3">
             <div class="port-mockup">
@@ -2704,11 +3159,35 @@
               you directly.
             </div>
           </div>
+          <div
+            style="
+              position: absolute;
+              top: 16px;
+              right: 16px;
+              background: rgba(201, 168, 76, 0.13);
+              border: 1px solid rgba(201, 168, 76, 0.35);
+              border-radius: 100px;
+              padding: 5px 13px;
+              z-index: 4;
+              backdrop-filter: blur(8px);
+            "
+          >
+            <span
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--gold);
+                font-weight: 600;
+                font-family: &quot;DM Sans&quot;, sans-serif;
+              "
+              >✦UI Demos
+            </span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
     <section id="process">
       <div class="section-label">How It Works</div>
       <h2 class="section-title">From Your Idea to <em>Live Website</em></h2>
@@ -2751,7 +3230,6 @@
       </div>
     </section>
 
-    <!-- WHY IT MATTERS -->
     <section id="why-it-matters">
       <div class="section-label">Why It Matters</div>
       <h2 class="section-title">Why Every Business <em>Needs a Website</em></h2>
@@ -2800,43 +3278,11 @@
             </div>
           </div>
         </div>
-        <div
-          class="testi-card"
-          style="
-            border-color: rgba(201, 168, 76, 0.4);
-            background: rgba(201, 168, 76, 0.04);
-          "
-        >
-          <div class="testi-quote" style="color: var(--gold)">🎯</div>
-          <p
-            class="testi-text"
-            style="color: var(--white); font-style: normal; font-size: 0.88rem"
-          >
-            We are currently accepting new clients at a
-            <strong>special introductory rate</strong>. Whatever your business —
-            big or small — you get a fully custom, professional website at a
-            price that works for you. Let's talk!
-          </p>
-          <div class="testi-author">
-            <div
-              class="testi-avatar"
-              style="background: var(--gold); color: #080c1a"
-            >
-              CV
-            </div>
-            <div>
-              <div class="testi-name">Codexia Team</div>
-              <div class="testi-role">Web Developers · Bangalore, India</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="contact-wrap">
-        <!-- LEFT: Info -->
         <div class="reveal">
           <div class="section-label">Get In Touch</div>
           <h2 class="section-title">Tell Me About <em>Your Business</em></h2>
@@ -2852,13 +3298,8 @@
               <div>
                 <div class="contact-item-label">Email</div>
                 <div class="contact-item-text">
-                  <a
-                    href="/cdn-cgi/l/email-protection#215744534f444a40534249484f4c4058101061464c40484d0f424e4c"
-                    ><span
-                      class="__cf_email__"
-                      data-cfemail="8dfbe8ffe3e8e6ecffeee5e4e3e0ecf4bcbccdeae0ece4e1a3eee2e0"
-                      >codex333@gmail.com</span
-                    ></a
+                  <a href="mailto:codexiya333@gmail.com"
+                    >codexiya333@gmail.com</a
                   >
                 </div>
               </div>
@@ -2879,10 +3320,7 @@
             </div>
           </div>
         </div>
-
-        <!-- RIGHT: Form -->
         <div class="contact-form reveal" style="transition-delay: 0.15s">
-          <!-- Success message -->
           <div class="form-msg success" id="formSuccess">
             <span>🎉</span>
             <div>
@@ -2890,7 +3328,6 @@
               you within 24 hours.
             </div>
           </div>
-          <!-- Error message -->
           <div class="form-msg error" id="formError">
             <span>⚠️</span>
             <div>
@@ -2898,17 +3335,16 @@
               WhatsApp us directly.
             </div>
           </div>
-
-          <!-- FORM — Replace YOUR_FORMSPREE_ID with your actual ID from formspree.io -->
           <form
             id="contactForm"
-            action="https://formspree.io/f/mvzwnewj"
+            action="https://script.google.com/macros/s/AKfycbw5OTJFAgNaQ9kXb8SqEFYZ48DiIZYqIIdaALU_LBNmeSqL-0oV1JbfRhzmlMsfF7GB/exec"
             method="POST"
+            autocomplete="off"
           >
             <div class="form-row" style="margin-bottom: 1.1rem">
               <div class="form-field">
-                <label class="form-label">Your Name *</label>
-                <input
+                <label class="form-label">Your Name *</label
+                ><input
                   class="form-input"
                   type="text"
                   name="name"
@@ -2917,8 +3353,8 @@
                 />
               </div>
               <div class="form-field">
-                <label class="form-label">Email Address *</label>
-                <input
+                <label class="form-label">Email Address *</label
+                ><input
                   class="form-input"
                   type="email"
                   name="email"
@@ -2927,18 +3363,15 @@
                 />
               </div>
             </div>
-
             <div class="form-field" style="margin-bottom: 1.1rem">
-              <label class="form-label">Phone / WhatsApp</label>
-              <input
+              <label class="form-label">Phone / WhatsApp</label
+              ><input
                 class="form-input"
                 type="tel"
                 name="phone"
                 placeholder="+91 98765 43210"
               />
             </div>
-
-            <!-- CUSTOM DROPDOWN -->
             <div class="form-field" style="margin-bottom: 1.1rem">
               <label class="form-label">Website Type Needed *</label>
               <div class="custom-select-wrap" id="serviceSelect">
@@ -3019,7 +3452,6 @@
                     <div class="opt-check"></div>
                   </div>
                 </div>
-                <!-- Hidden input for form submission -->
                 <input
                   type="hidden"
                   name="service"
@@ -3028,17 +3460,15 @@
                 />
               </div>
             </div>
-
             <div class="form-field" style="margin-bottom: 1.1rem">
-              <label class="form-label">Tell Us About Your Project *</label>
-              <textarea
+              <label class="form-label">Tell Us About Your Project *</label
+              ><textarea
                 class="form-input"
                 name="message"
                 placeholder="Tell me about your business, what you need and your budget range..."
                 required
               ></textarea>
             </div>
-
             <button
               type="submit"
               class="btn-primary btn-submit"
@@ -3052,7 +3482,6 @@
       </div>
     </section>
 
-    <!-- WhatsApp Floating Bubble -->
     <a
       class="wa-float"
       href="https://wa.me/917795166576?text=Hi%2C%20I%27m%20interested%20in%20a%20website!"
@@ -3067,7 +3496,6 @@
       </svg>
     </a>
 
-    <!-- GOODBYE SECTION -->
     <section
       style="
         padding: 4rem;
@@ -3143,7 +3571,7 @@
             margin-bottom: 0.3rem;
           "
         >
-          — Codexia Team
+          — Team Codexiya
         </p>
         <p
           style="
@@ -3153,7 +3581,7 @@
             text-transform: uppercase;
           "
         >
-          Web Developers · Bangalore, India
+          Designers & Developers · Bangalore, India
         </p>
         <div style="margin-top: 2rem">
           <a
@@ -3173,21 +3601,32 @@
             "
             onmouseover="this.style.background = 'var(--gold2)'"
             onmouseout="this.style.background = 'var(--gold)'"
+            >Let's Build Something Together ✦</a
           >
-            Let's Build Something Together ✦
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-      <div class="footer-logo">Codexia<span>.</span></div>
+      <div class="footer-logo">Codexiya<span>.</span></div>
       <div class="footer-copy">© 2025 Codexia. All rights reserved.</div>
     </footer>
 
+    <style>
+      @keyframes livePulse {
+        0%,
+        100% {
+          box-shadow: 0 0 4px rgba(0, 210, 120, 0.7);
+        }
+        50% {
+          box-shadow:
+            0 0 12px rgba(0, 210, 120, 1),
+            0 0 0 5px rgba(0, 210, 120, 0.15);
+        }
+      }
+    </style>
+
     <script>
-      /* ── THEME TOGGLE ── */
       function toggleTheme() {
         const html = document.documentElement;
         const isLight = html.getAttribute("data-theme") === "light";
@@ -3196,7 +3635,6 @@
         const mBtn = document.getElementById("mobileThemeBtn");
         if (mBtn) mBtn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
       }
-      // Load saved theme
       (function () {
         const saved = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", saved);
@@ -3206,7 +3644,6 @@
             saved === "light" ? "☀️ Light Mode" : "🌙 Dark Mode";
       })();
 
-      /* ── HAMBURGER ── */
       function toggleMenu() {
         const h = document.getElementById("hamburger");
         const m = document.getElementById("mobileMenu");
@@ -3234,7 +3671,6 @@
         document.body.style.overflow = "";
       }
 
-      /* ── SMOOTH SCROLL ── */
       document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener("click", (e) => {
           const target = document.querySelector(link.getAttribute("href"));
@@ -3248,7 +3684,6 @@
         });
       });
 
-      /* ── ACTIVE NAV + PROGRESS + SCROLL TOP ── */
       const sections = document.querySelectorAll("section[id]");
       const navLinks = document.querySelectorAll(".nav-links a");
       const progressBar = document.getElementById("progress-bar");
@@ -3273,7 +3708,6 @@
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
 
-      /* ── CUSTOM DROPDOWN ── */
       function toggleSelect() {
         document.getElementById("serviceSelect").classList.toggle("open");
         document.getElementById("selectTrigger").classList.toggle("open");
@@ -3300,25 +3734,15 @@
         }
       });
 
-      /* ── FORMSPREE AJAX SUBMISSION ── */
       const form = document.getElementById("contactForm");
       const submitBtn = document.getElementById("submitBtn");
       const successMsg = document.getElementById("formSuccess");
       const errorMsg = document.getElementById("formError");
-
       if (form) {
         form.addEventListener("submit", async function (e) {
           e.preventDefault();
-
-          // ── Validate all required fields ──
-          const name = form.querySelector('[name="name"]').value.trim();
-          const email = form.querySelector('[name="email"]').value.trim();
-          const msg = form.querySelector('[name="message"]').value.trim();
           const svc = document.getElementById("serviceValue").value;
-
-          // Highlight missing fields
           let hasError = false;
-
           [
             form.querySelector('[name="name"]'),
             form.querySelector('[name="email"]'),
@@ -3334,7 +3758,6 @@
               hasError = true;
             }
           });
-
           if (!svc) {
             const sw = document.getElementById("serviceSelect");
             sw.querySelector(".custom-select-trigger").style.borderColor =
@@ -3347,30 +3770,23 @@
             );
             hasError = true;
           }
-
           if (hasError) {
-            // Show a gentle shake on the button
             submitBtn.style.animation = "shake 0.4s ease";
             setTimeout(() => (submitBtn.style.animation = ""), 400);
             return;
           }
-
-          // ── Loading state ──
           submitBtn.classList.add("loading");
           submitBtn.textContent = "Sending...";
           submitBtn.disabled = true;
           successMsg.classList.remove("show");
           errorMsg.classList.remove("show");
-
           try {
             const res = await fetch(form.action, {
               method: "POST",
               body: new FormData(form),
               headers: { Accept: "application/json" },
             });
-
             if (res.ok) {
-              // ── Success ──
               form.reset();
               document.getElementById("selectTrigger").textContent =
                 "Select a service...";
@@ -3387,26 +3803,21 @@
                 block: "nearest",
               });
             } else {
-              // ── Formspree returned error ──
               errorMsg.querySelector("div").innerHTML =
                 "<strong>Something went wrong.</strong><br>Please try again or WhatsApp us directly.";
               errorMsg.classList.add("show");
             }
           } catch (err) {
-            // ── Network / fetch error ──
             errorMsg.querySelector("div").innerHTML =
               "<strong>Could not connect.</strong><br>Please check your internet and try again, or reach us on WhatsApp.";
             errorMsg.classList.add("show");
           }
-
-          // ── Reset button ──
           submitBtn.classList.remove("loading");
           submitBtn.textContent = "Send Message — It's Free ✦";
           submitBtn.disabled = false;
         });
       }
 
-      /* ── SCROLL REVEAL ── */
       const reveals = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
